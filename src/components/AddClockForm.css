@@ -1,0 +1,12 @@
+.form-container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-end;
+}
+
+.form-name,
+.form-timezone{
+    display: flex;
+    flex-direction: column;
+}
+
