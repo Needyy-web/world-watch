@@ -15,13 +15,13 @@
     position: absolute;
     top: -28px;
     font-size: 16px;
-    color: #ccc;
+    color: var(--text);
     margin: 0;
 }
 
 .clock-time {
     font-size: 20px;
-    color: #ddd;
+    color: var(--text);
     margin: 0;
 }
 
@@ -32,8 +32,22 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    border: 1px solid #888;
+    border: 1px solid var(--border);
     background: #333;
     color: #fff;
     cursor: pointer;
+}
+
+.clock-card {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 32px;
 }

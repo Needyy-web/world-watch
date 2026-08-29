@@ -5,3 +5,8 @@
   justify-content: center;
   margin-top: 40px;
 }
+
+:root {
+  --text: #ddd;
+  --border: #888;
+}

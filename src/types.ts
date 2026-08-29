@@ -10,11 +10,12 @@ export interface ClockProps {
     offset: number;
     onRemove: (id: string) => void;
 }
+
 export interface NewClockData {
     name: string;
     offset: number;
 }
 
 export interface AddClockFormProps {
-    onAdd: (data: newClockData) => void;
+    onAdd: (data: NewClockData) => void;
 }

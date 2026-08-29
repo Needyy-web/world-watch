@@ -4,12 +4,11 @@ import  Clock  from './components/Clock'
 import type { NewClockData } from './types'
 import AddClockForm from './components/AddClockForm';
 import './App.css'
+import { MOCK_CLOCKS } from './mockClocks';
+
 
 function App() {
-    const [clocks, setClocks] = useState<ClockData[]>([
-        {id: '1', name: 'Moscow', offset: 3},
-        {id: '2', name: 'New York', offset: -4},
-    ]);
+    const [clocks, setClocks] = useState<ClockData[]>(MOCK_CLOCKS);
     const handleRemove = ((id: string) => {
         setClocks(clocks.filter(clock => clock.id !== id));
     })
@@ -17,7 +16,7 @@ function App() {
     setClocks([...clocks, {id: Date.now().toString(), ...data }])
     }
     return (
-        <div>
+        <div className='clocks-list'>
             <h1>Мировые часы</h1>
             <AddClockForm onAdd={handleAdd} />
             {clocks.map((clock) => (
